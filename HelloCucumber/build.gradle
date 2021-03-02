@@ -18,7 +18,7 @@ dependencies {
 
 group = 'com.wade.spring.examples'
 version = '1.0.0-SNAPSHOT'
-description = 'Inroduction to Cucumber LIbrary for BDD'
+description = 'Inroduction to Cucumber Library for BDD'
 sourceCompatibility = '14'
 
 publishing {

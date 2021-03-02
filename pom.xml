@@ -12,5 +12,6 @@
         <module>SpringMVC</module>
         <module>SpringJPAMVC</module>
         <module>HelloCucumber</module>
+        <module>SpringCucumber</module>
     </modules>
 </project>

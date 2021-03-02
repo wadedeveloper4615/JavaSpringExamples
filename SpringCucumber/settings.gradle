@@ -5,9 +5,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = 'Spring-Examples'
-
-include 'SpringMVC'
-include 'SpringJPAMVC'
-include 'HelloCucumber'
-include 'SpringCucumber'
+rootProject.name = 'SpringCucumber'

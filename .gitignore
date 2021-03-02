@@ -21,14 +21,29 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.gradle/
 SpringJPAMVC/bin
 SpringJPAMVC/build
+SpringJPAMVC/target/
+
 SpringMVC/bin
 SpringMVC/build
-.gradle/
+SpringMVC/target/
+
+SpringCucumber/bin
+SpringCucumber/build
+SpringCucumber/target/
+
 HelloCucumber/bin/
 HelloCucumber/build/
-SpringJPAMVC/target/
-SpringMVC/target/
 HelloCucumber/target/
-SpringCucumber/target/
+SpringCucumber/.settings/
+SpringJPAMVC/.settings/
+SpringMVC/.settings/
+SpringCucumber/.classpath
+SpringCucumber/.project
+SpringCucumber/HELP.md
+SpringJPAMVC/.classpath
+SpringJPAMVC/.project
+SpringMVC/.classpath
+SpringMVC/.project

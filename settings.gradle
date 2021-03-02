@@ -9,3 +9,4 @@ rootProject.name = 'Spring-Examples'
 
 include 'SpringMVC'
 include 'SpringJPAMVC'
+include 'HelloCucumber'

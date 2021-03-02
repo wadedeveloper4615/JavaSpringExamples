@@ -24,3 +24,5 @@ hs_err_pid*
 SpringJPAMVC/
 SpringMVC/
 .gradle/
+HelloCucumber/bin/
+HelloCucumber/build/

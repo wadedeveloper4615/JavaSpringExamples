@@ -37,22 +37,7 @@ configurations {
         extendsFrom testCompile
     }
 }
-/*
-task cucumber() {
-    dependsOn assemble, testClasses
-    doLast {
-        javaexec {
-            main = "io.cucumber.core.cli.Main"
-            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty', '--glue', 'feature', 'src/test/resources']
-        }
-    }
-}
 
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
-*/
 test {
 	useJUnit()
 }

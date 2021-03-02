@@ -16,6 +16,7 @@ import com.wade.spring.examples.jpa.mvc.exception.RecordNotFoundException;
 import com.wade.spring.examples.jpa.mvc.model.Employee;
 import com.wade.spring.examples.jpa.mvc.service.EmployeeService;
 
+@SuppressWarnings("unused")
 @Controller
 public class IndexController {
 	private Logger logger = LoggerFactory.getLogger(IndexController.class);

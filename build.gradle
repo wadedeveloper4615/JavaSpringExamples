@@ -12,9 +12,10 @@ plugins {
 
 allprojects {
 	group = 'com.wade.spring.examples'
-	version = '0.0.1-SNAPSHOT'
+    version = '1.0.0-SNAPSHOT'
 	sourceCompatibility = '14'
 }
+
 subprojects {
 	repositories {
 		mavenCentral()

@@ -16,10 +16,10 @@ dependencies {
     testImplementation 'junit:junit:4.13'
 }
 
-group = 'hellocucumber'
+group = 'com.wade.spring.examples'
 version = '1.0.0-SNAPSHOT'
-description = 'hellocucumber'
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+description = 'Inroduction to Cucumber LIbrary for BDD'
+sourceCompatibility = '14'
 
 publishing {
     publications {

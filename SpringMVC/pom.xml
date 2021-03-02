@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.wade.spring.examples</groupId>
 	<artifactId>com.wade.springmvc</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>SpringMVC</name>
 	<description>Spring MVC Demo project for Spring Boot</description>

@@ -5,11 +5,12 @@
 
     <groupId>com.wade</groupId>
     <artifactId>Spring-Examples</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>SpringMVC</module>
         <module>SpringJPAMVC</module>
+        <module>HelloCucumber</module>
     </modules>
 </project>

@@ -13,7 +13,7 @@ plugins {
 allprojects {
 	group = 'com.wade.spring.examples'
     version = '1.0.0-SNAPSHOT'
-	sourceCompatibility = '14'
+	sourceCompatibility = '15'
 }
 
 subprojects {

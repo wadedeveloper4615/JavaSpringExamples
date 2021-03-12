@@ -5,8 +5,11 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +24,11 @@ import com.wade.spring.examples.jpa.mvc.service.EmployeeService;
 public class IndexController {
 	private Logger logger = LoggerFactory.getLogger(IndexController.class);
 	@Autowired
-	private EmployeeService service;
+	private final EmployeeService service;
+
+	public IndexController(EmployeeService service) {
+		this.service = service;
+	}
 
 	@RequestMapping(path = "/createEmployee", method = RequestMethod.POST)
 	public String createOrUpdateEmployee(Employee employee) {
@@ -37,13 +44,19 @@ public class IndexController {
 
 	@RequestMapping(path = { "/edit", "/edit/{id}" })
 	public String editEmployeeById(Model model, @PathVariable("id") Optional<Long> id) throws RecordNotFoundException {
+		Employee entity;
 		if (id.isPresent()) {
-			Employee entity = service.getEmployeeById(id.get());
-			model.addAttribute("employee", entity);
+			entity = service.getEmployeeById(id.get());
 		} else {
-			model.addAttribute("employee", new Employee());
+			entity = new Employee();
 		}
+		model.addAttribute("employee", entity);
 		return "add-edit-employee";
+	}
+
+	@ExceptionHandler(RuntimeException.class)
+	public final ResponseEntity<Exception> handleAllExceptions(RuntimeException ex) {
+		return new ResponseEntity<>(ex, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 	@GetMapping("/")

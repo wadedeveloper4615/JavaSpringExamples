@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.wade.spring.examples</groupId>
-	<artifactId>com.wade.springmvc</artifactId>
+	<artifactId>SpringMVC</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>SpringMVC</name>

@@ -15,8 +15,8 @@ import com.wade.spring.examples.security.model.User;
 import com.wade.spring.examples.security.repository.RoleRepository;
 import com.wade.spring.examples.security.repository.UserRepository;
 
+@SuppressWarnings("deprecation")
 public class UserServiceTest {
-
 	@Mock
 	private UserRepository mockUserRepository;
 	@Mock

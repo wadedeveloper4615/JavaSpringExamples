@@ -47,3 +47,8 @@ SpringJPAMVC/.classpath
 SpringJPAMVC/.project
 SpringMVC/.classpath
 SpringMVC/.project
+SpringSecurityJPA/target/
+SpringSecurityJPA/.settings/.jsdtscope
+SpringSecurityJPA/.settings/
+SpringSecurityJPA/.classpath
+SpringSecurityJPA/.project

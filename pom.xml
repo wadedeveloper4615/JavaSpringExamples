@@ -13,5 +13,6 @@
         <module>SpringJPAMVC</module>
         <module>HelloCucumber</module>
         <module>SpringCucumber</module>
+        <module>SpringSecurityJPA</module>
     </modules>
 </project>

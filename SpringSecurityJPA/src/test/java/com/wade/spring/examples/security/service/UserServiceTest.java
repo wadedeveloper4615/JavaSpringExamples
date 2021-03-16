@@ -1,21 +1,24 @@
 package com.wade.spring.examples.security.service;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.MockitoAnnotations.initMocks;
+import static org.mockito.Mockito.when;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.wade.spring.examples.security.model.User;
 import com.wade.spring.examples.security.repository.RoleRepository;
 import com.wade.spring.examples.security.repository.UserRepository;
 
-@SuppressWarnings("deprecation")
+@ExtendWith(MockitoExtension.class)
 public class UserServiceTest {
 	@Mock
 	private UserRepository mockUserRepository;
@@ -23,41 +26,37 @@ public class UserServiceTest {
 	private RoleRepository mockRoleRepository;
 	@Mock
 	private BCryptPasswordEncoder mockBCryptPasswordEncoder;
-
+	@InjectMocks
 	private UserService userServiceUnderTest;
 	private User user;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
-		initMocks(this);
-		userServiceUnderTest = new UserService(mockUserRepository, mockRoleRepository, mockBCryptPasswordEncoder);
-		user = User.builder().id(1).name("Gustavo").lastName("Ponce").email("test@test.com").build();
+		user = User.builder().id(1).userName("GPonce").name("Gustavo").lastName("Ponce").email("test@test.com").build();
+	}
 
-		Mockito.when(mockUserRepository.save(any())).thenReturn(user);
-		Mockito.when(mockUserRepository.findByEmail(anyString())).thenReturn(user);
+	@Test
+	public void testFindByUserName() {
+		String userName = "GPonce";
+		when(mockUserRepository.findByUserName(userName)).thenReturn(user);
+		User result = userServiceUnderTest.findUserByUserName(userName);
+		assertNotNull(result);
+		assertEquals(userName, result.getUserName());
 	}
 
 	@Test
 	public void testFindUserByEmail() {
-		// Setup
+		when(mockUserRepository.findByEmail(anyString())).thenReturn(user);
 		final String email = "test@test.com";
-
-		// Run the test
 		final User result = userServiceUnderTest.findUserByEmail(email);
-
-		// Verify the results
 		assertEquals(email, result.getEmail());
 	}
 
 	@Test
 	public void testSaveUser() {
-		// Setup
+		when(mockUserRepository.save(any())).thenReturn(user);
 		final String email = "test@test.com";
-
-		// Run the test
 		User result = userServiceUnderTest.saveUser(User.builder().build());
-
-		// Verify the results
 		assertEquals(email, result.getEmail());
 	}
 }

@@ -25,7 +25,6 @@ dependencies {
   testCompile 'io.cucumber:cucumber-java:6.8.1'
   testCompile 'io.cucumber:cucumber-junit:6.8.1'
   testCompile 'io.cucumber:cucumber-spring:6.8.1'
-  testCompile 'io.cucumber:cucumber-junit-platform-engine:6.8.1'
    
   // Junit5
   testImplementation('org.springframework.boot:spring-boot-starter-test') {

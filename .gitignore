@@ -54,3 +54,8 @@ SpringSecurityJPA/.project
 SpringSecurityJPA/src2/
 SpringSecurityJPA/build/
 SpringSecurityJPA/bin/
+SpringWIthAngular/.settings/
+SpringWIthAngular/bin/
+SpringWIthAngular/build/
+SpringWIthAngular/target/
+SpringWIthAngular/src/main/resources/public/

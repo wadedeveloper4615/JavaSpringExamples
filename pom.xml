@@ -14,5 +14,6 @@
         <module>HelloCucumber</module>
         <module>SpringCucumber</module>
         <module>SpringSecurityJPA</module>
+        <module>SpringWithAngular</module>
     </modules>
 </project>

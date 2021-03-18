@@ -1,13 +1,13 @@
 package com.wade.spring.examples.springcucumber.bagextra;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.wade.spring.examples.springcucumber.bagcommons.BagHttpClient;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 
 public class BagExtraCucumberStepDefinitions {
 

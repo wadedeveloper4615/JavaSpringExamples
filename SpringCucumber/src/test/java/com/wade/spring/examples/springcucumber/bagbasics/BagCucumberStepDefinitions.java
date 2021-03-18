@@ -1,7 +1,10 @@
 package com.wade.spring.examples.springcucumber.bagbasics;
 
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.IntStream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,11 +13,8 @@ import org.springframework.http.HttpStatus;
 
 import com.wade.spring.examples.springcucumber.bagcommons.BagHttpClient;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.IntStream;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class BagCucumberStepDefinitions {
 

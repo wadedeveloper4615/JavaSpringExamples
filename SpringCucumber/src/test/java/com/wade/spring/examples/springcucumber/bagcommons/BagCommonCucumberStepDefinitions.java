@@ -1,9 +1,10 @@
 package com.wade.spring.examples.springcucumber.bagcommons;
 
-import io.cucumber.java.en.Given;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import io.cucumber.java.en.Given;
 
 public class BagCommonCucumberStepDefinitions {
 
